@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trebla</title>
+    <meta
+      name="description"
+      content="Open source collaboration, software services, and applied research in blockchain and AI."
+    />
+    <meta property="og:title" content="Trebla" />
+    <meta
+      property="og:description"
+      content="Open source collaboration, software services, and applied research in blockchain and AI."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1600&auto=format&fit=crop"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="/assets/media/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+  </head>
+
+  <body class="antialiased selection:bg-white/10 selection:text-white">
+    <header
+      class="sticky top-0 z-40 backdrop-blur bg-black/10 border-b border-white/5"
+    >
+      <div
+        class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="size-8 rounded-full bg-black/10 flex items-center justify-center"
+          >
+            <img
+              class="size-4 flex items-center justify-center fit-content"
+              src="/assets/media/favicon.svg"
+              alt="Trebla"
+              draggable="false"
+            />
+          </div>
+          <span class="text-sm tracking-wide text-zinc-300">Trebla</span>
+        </div>
+
+        <nav class="flex items-center gap-6">
+          <a
+            href="http://github.com/trebla-io"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="transition hover:opacity-80"
+          >
+            <img
+              src="assets/media/github-mark.svg"
+              alt="GitHub"
+              class="w-5 h-5"
+              draggable="false"
+            />
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="relative">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-emerald-500/10 via-cyan-400/5 to-transparent"
+      ></div>
+
+      <div class="mx-auto relative">
+        <figure class="overflow-hidden bg-black/20 relative">
+          <img
+            src="assets/media/cover.jpg"
+            alt="Cosmic working person"
+            class="w-full h-[44vh] sm:h-[60vh] object-cover object-center"
+            loading="eager"
+            draggable="false"
+          />
+
+          <div
+            class="absolute inset-0 pointer-events-none"
+            style="
+              background: linear-gradient(
+                  to bottom,
+                  rgba(0, 0, 0, 0.75),
+                  rgba(0, 0, 0, 0.4) 30%,
+                  transparent 60%
+                ),
+                linear-gradient(
+                  to right,
+                  rgba(0, 0, 0, 0.7),
+                  transparent 25%,
+                  transparent 75%,
+                  rgba(0, 0, 0, 0.7)
+                );
+            "
+          ></div>
+        </figure>
+      </div>
+    </section>
+
+    <main class="mx-auto max-w-4xl px-4">
+      <h1 class="serif text-zinc-100 text-3xl sm:text-4xl mt-10">
+        Research & Engineering
+      </h1>
+
+      <div
+        class="prose prose-invert prose-zinc max-w-none mt-6 leading-relaxed"
+      >
+        <p>
+          Trebla is a research and engineering company. We collaborate with the
+          open source community and deliver custom software solutions. Our team
+          combines technical expertise with applied research to create tools and
+          systems that drive real impact. From code automation to decentralized
+          infrastructure, we focus on building what’s next.
+        </p>
+      </div>
+
+      <section id="work" class="mx-auto max-w-6xl mt-16 sm:mt-16">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+            <h3 class="serif text-xl text-white">Open Source</h3>
+            <p class="mt-2 text-sm text-zinc-400">
+              Active contribution to open source projects and communities.
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+            <h3 class="serif text-xl text-white">Services</h3>
+            <p class="mt-2 text-sm text-zinc-400">
+              End-to-end software development, automation, and consulting.
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+            <h3 class="serif text-xl text-white">Research</h3>
+            <p class="mt-2 text-sm text-zinc-400">
+              Applied research in blockchain, AI, and emerging technologies.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="team" class="mt-20 sm:mt-28 border-t border-white/10">
+      <div
+        class="mx-auto max-w-6xl px-4 py-10 text-sm text-zinc-400 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between"
+      >
+        <p>© <span id="y">2025</span> Trebla. Research & Engineering.</p>
+      </div>
+    </footer>
+
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>
