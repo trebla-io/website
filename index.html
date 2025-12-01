@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Trebla</title>
+    <title>Trebla | Research & Engineering</title>
     <meta
       name="description"
       content="Open source collaboration, software services, and applied research in blockchain and AI."
@@ -20,11 +20,32 @@
     />
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            colors: {
+              border: "rgba(255, 255, 255, 0.08)",
+              surface: "rgba(255, 255, 255, 0.03)",
+            },
+            backgroundImage: {
+              "grid-pattern":
+                "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
+            },
+          },
+        },
+      };
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap"
       rel="stylesheet"
     />
 
@@ -37,131 +58,267 @@
     <link rel="stylesheet" href="/assets/styles/style.css" />
   </head>
 
-  <body class="antialiased selection:bg-white/10 selection:text-white">
-    <header
-      class="sticky top-0 z-40 backdrop-blur bg-black/10 border-b border-white/5"
-    >
+  <body
+    class="antialiased selection:bg-white selection:text-black bg-black text-zinc-300"
+  >
+    <div
+      class="fixed inset-0 z-[-1] bg-[size:40px_40px] bg-grid-pattern opacity-20 pointer-events-none"
+    ></div>
+    <div
+      class="fixed inset-0 z-[-1] bg-gradient-to-b from-black via-transparent to-black pointer-events-none"
+    ></div>
+
+    <header class="fixed top-0 w-full z-50 mix-blend-difference" id="navbar">
       <div
-        class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between"
+        class="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between"
       >
-        <div class="flex items-center gap-3">
-          <div
-            class="size-8 rounded-full bg-black/10 flex items-center justify-center"
-          >
+        <div class="flex items-center gap-4 group cursor-pointer">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-white blur-lg opacity-0 group-hover:opacity-20 transition duration-500"
+            ></div>
             <img
-              class="size-4 flex items-center justify-center fit-content"
+              class="size-5 relative z-10"
               src="/assets/media/favicon.svg"
               alt="Trebla"
               draggable="false"
             />
           </div>
-          <span class="text-sm tracking-wide text-zinc-300">Trebla</span>
+          <span
+            class="font-display font-bold tracking-widest text-white uppercase text-sm"
+            >Trebla</span
+          >
         </div>
 
-        <nav class="flex items-center gap-6">
+        <nav class="flex items-center gap-8">
           <a
             href="http://github.com/trebla-io"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
-            class="transition hover:opacity-80"
+            class="text-xs font-mono text-zinc-500 hover:text-white transition-colors uppercase tracking-widest"
           >
-            <img
-              src="assets/media/github-mark.svg"
-              alt="GitHub"
-              class="w-5 h-5"
-              draggable="false"
-            />
+            [GitHub]
           </a>
         </nav>
       </div>
     </header>
 
-    <section class="relative">
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-emerald-500/10 via-cyan-400/5 to-transparent"
-      ></div>
+    <main class="relative pt-40 pb-20">
+      <!-- Hero Section -->
+      <section class="mx-auto max-w-7xl px-6 mb-40">
+        <div class="max-w-5xl">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-8 reveal"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"
+            ></span>
+            <span
+              class="text-[10px] font-mono uppercase tracking-widest text-zinc-400"
+              >System Operational</span
+            >
+          </div>
 
-      <div class="mx-auto relative">
-        <figure class="overflow-hidden bg-black/20 relative">
-          <img
-            src="assets/media/cover.jpg"
-            alt="Cosmic working person"
-            class="w-full h-[44vh] sm:h-[60vh] object-cover object-center"
-            loading="eager"
-            draggable="false"
-          />
+          <h1
+            class="font-display text-6xl sm:text-8xl md:text-9xl font-medium text-white mb-12 leading-[0.85] tracking-tight reveal delay-100"
+          >
+            Engineering <br />
+            <span
+              class="text-zinc-500 glitch-hover cursor-default inline-block"
+              data-value="THE_FUTURE"
+              >the future</span
+            >
+          </h1>
 
           <div
-            class="absolute inset-0 pointer-events-none"
-            style="
-              background: linear-gradient(
-                  to bottom,
-                  rgba(0, 0, 0, 0.75),
-                  rgba(0, 0, 0, 0.4) 30%,
-                  transparent 60%
-                ),
-                linear-gradient(
-                  to right,
-                  rgba(0, 0, 0, 0.7),
-                  transparent 25%,
-                  transparent 75%,
-                  rgba(0, 0, 0, 0.7)
-                );
-            "
-          ></div>
-        </figure>
-      </div>
-    </section>
-
-    <main class="mx-auto max-w-4xl px-4">
-      <h1 class="serif text-zinc-100 text-3xl sm:text-4xl mt-10">
-        Research & Engineering
-      </h1>
-
-      <div
-        class="prose prose-invert prose-zinc max-w-none mt-6 leading-relaxed"
-      >
-        <p>
-          Trebla is a research and engineering company. We collaborate with the
-          open source community and deliver custom software solutions. Our team
-          combines technical expertise with applied research to create tools and
-          systems that drive real impact. From code automation to decentralized
-          infrastructure, we focus on building what’s next.
-        </p>
-      </div>
-
-      <section id="work" class="mx-auto max-w-6xl mt-16 sm:mt-16">
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
-            <h3 class="serif text-xl text-white">Open Source</h3>
-            <p class="mt-2 text-sm text-zinc-400">
-              Active contribution to open source projects and communities.
+            class="max-w-xl reveal delay-200 border-l border-white/20 pl-8 ml-2"
+          >
+            <p class="text-lg text-zinc-400 leading-relaxed font-light">
+              Trebla is a research and engineering collective. We bridge the gap
+              between
+              <span class="text-white">theoretical research</span> and
+              <span class="text-white">applied technology</span>
+              in blockchain and artificial intelligence.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visual Break -->
+      <section class="w-full mb-40 reveal delay-300">
+        <div class="mx-auto max-w-7xl px-6">
+          <div
+            class="relative w-full aspect-[21/9] overflow-hidden group border-y border-white/10"
+          >
+            <img
+              src="assets/media/cover.jpg"
+              alt="Abstract technology visualization"
+              class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale transition duration-[2s] group-hover:scale-105 group-hover:opacity-80"
+            />
+            <div
+              class="absolute inset-0 bg-[url('/assets/media/noise.png')] opacity-20 mix-blend-overlay"
+            ></div>
+
+            <!-- HUD Elements -->
+            <div class="absolute top-6 left-6 flex gap-4">
+              <div class="h-px w-12 bg-white/50"></div>
+              <div class="text-[10px] font-mono text-white/70">IMG_SEQ_01</div>
+            </div>
+            <div class="absolute bottom-6 right-6 text-right">
+              <div class="text-[10px] font-mono text-white/70 mb-2">
+                COORDINATES
+              </div>
+              <div class="text-2xl font-display text-white">34.0522° N</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Grid -->
+      <section id="work" class="mx-auto max-w-7xl px-6 mb-32">
+        <div
+          class="flex items-end justify-between mb-16 reveal border-b border-white/10 pb-8"
+        >
+          <h2 class="font-display text-4xl text-white">Capabilities</h2>
+          <div class="hidden sm:block text-xs font-mono text-zinc-500">
+            /// INDEX_01
+          </div>
+        </div>
+
+        <div
+          class="grid gap-px bg-white/10 border border-white/10 sm:grid-cols-3"
+          id="cards-container"
+        >
+          <!-- Card 1 -->
+          <article
+            class="spotlight-card p-10 group transition duration-500 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition duration-500 z-10"
+            >
+              <svg
+                class="w-4 h-4 text-white transform rotate-45"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M5 10l7-7m0 0l7 7m-7-7v18"
+                ></path>
+              </svg>
+            </div>
+            <div class="h-full flex flex-col justify-between relative z-10">
+              <div>
+                <span class="text-xs font-mono text-zinc-500 mb-4 block"
+                  >01</span
+                >
+                <h3 class="font-display text-2xl text-white mb-4">
+                  Open Source
+                </h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                  Active contribution to core infrastructure, developer tooling,
+                  and open protocols that power the decentralized web.
+                </p>
+              </div>
+              <div
+                class="mt-12 h-px w-full bg-zinc-800 group-hover:bg-white/30 transition duration-500"
+              ></div>
+            </div>
           </article>
 
-          <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
-            <h3 class="serif text-xl text-white">Services</h3>
-            <p class="mt-2 text-sm text-zinc-400">
-              End-to-end software development, automation, and consulting.
-            </p>
+          <!-- Card 2 -->
+          <article
+            class="spotlight-card p-10 group transition duration-500 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition duration-500 z-10"
+            >
+              <svg
+                class="w-4 h-4 text-white transform rotate-45"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M5 10l7-7m0 0l7 7m-7-7v18"
+                ></path>
+              </svg>
+            </div>
+            <div class="h-full flex flex-col justify-between relative z-10">
+              <div>
+                <span class="text-xs font-mono text-zinc-500 mb-4 block"
+                  >02</span
+                >
+                <h3 class="font-display text-2xl text-white mb-4">Services</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                  End-to-end engineering for high-stakes environments. Smart
+                  contract auditing, full-stack application development, and
+                  system architecture.
+                </p>
+              </div>
+              <div
+                class="mt-12 h-px w-full bg-zinc-800 group-hover:bg-white/30 transition duration-500"
+              ></div>
+            </div>
           </article>
 
-          <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
-            <h3 class="serif text-xl text-white">Research</h3>
-            <p class="mt-2 text-sm text-zinc-400">
-              Applied research in blockchain, AI, and emerging technologies.
-            </p>
+          <!-- Card 3 -->
+          <article
+            class="spotlight-card p-10 group transition duration-500 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition duration-500 z-10"
+            >
+              <svg
+                class="w-4 h-4 text-white transform rotate-45"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1"
+                  d="M5 10l7-7m0 0l7 7m-7-7v18"
+                ></path>
+              </svg>
+            </div>
+            <div class="h-full flex flex-col justify-between relative z-10">
+              <div>
+                <span class="text-xs font-mono text-zinc-500 mb-4 block"
+                  >03</span
+                >
+                <h3 class="font-display text-2xl text-white mb-4">Research</h3>
+                <p class="text-sm text-zinc-400 leading-relaxed">
+                  Applied research in zero-knowledge proofs, agentic AI
+                  workflows, and decentralized governance models.
+                </p>
+              </div>
+              <div
+                class="mt-12 h-px w-full bg-zinc-800 group-hover:bg-white/30 transition duration-500"
+              ></div>
+            </div>
           </article>
         </div>
       </section>
     </main>
 
-    <footer id="team" class="mt-20 sm:mt-28 border-t border-white/10">
+    <footer class="border-t border-white/10 bg-black">
       <div
-        class="mx-auto max-w-6xl px-4 py-10 text-sm text-zinc-400 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between"
+        class="mx-auto max-w-7xl px-6 py-12 flex flex-col md:flex-row gap-8 items-center justify-between"
       >
-        <p>© <span id="y">2025</span> Trebla. Research & Engineering.</p>
+        <div class="flex items-center gap-3">
+          <div class="size-2 bg-white rounded-full"></div>
+          <p class="text-xs font-mono text-zinc-500 uppercase tracking-widest">
+            Trebla © <span id="y">2025</span>
+          </p>
+        </div>
       </div>
     </footer>
 
