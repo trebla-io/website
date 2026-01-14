@@ -21,8 +21,27 @@
       content="blockchain, artificial intelligence, zero-knowledge proofs, smart contracts, open source, software engineering, research, AI agents, decentralized systems, web3"
     />
     <meta name="author" content="Trebla" />
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
     <link rel="canonical" href="https://trebla.io/" />
+
+    <!-- Additional SEO -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="geo.region" content="US" />
+    <meta name="language" content="English" />
+    <meta name="rating" content="general" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <!-- DNS Prefetch & Preconnect for Performance -->
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://trebla.io/" />
@@ -61,29 +80,15 @@
     />
     <meta name="twitter:image:alt" content="Trebla - Research & Engineering" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-              mono: ["JetBrains Mono", "monospace"],
-              display: ["Space Grotesk", "sans-serif"],
-            },
-            colors: {
-              border: "rgba(255, 255, 255, 0.08)",
-              surface: "rgba(255, 255, 255, 0.03)",
-            },
-            backgroundImage: {
-              "grid-pattern":
-                "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
-            },
-          },
-        },
-      };
-    </script>
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/assets/styles/style.css" as="style" />
+    <link rel="preload" href="/assets/scripts/script.js" as="script" />
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/scripts/tailwind-config.js"></script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -91,61 +96,18 @@
       rel="stylesheet"
     />
 
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/assets/media/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/assets/media/favicon.svg" />
-    <link rel="apple-touch-icon" href="/assets/media/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/media/favicon.svg"
+    />
+    <link rel="mask-icon" href="/assets/media/favicon.svg" color="#000000" />
 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="/assets/styles/style.css" />
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Trebla",
-        "url": "https://trebla.io",
-        "logo": "https://trebla.io/assets/media/favicon.svg",
-        "description": "A research and engineering collective bridging theoretical research and applied technology in blockchain and artificial intelligence.",
-        "foundingDate": "2025",
-        "sameAs": ["https://github.com/trebla-io"],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Technical Support",
-          "url": "https://github.com/trebla-io"
-        },
-        "areaServed": "Worldwide",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Engineering Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Open Source Contribution",
-                "description": "Active contribution to core infrastructure, developer tooling, and open protocols that power the decentralized web."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Software Engineering Services",
-                "description": "End-to-end engineering for high-stakes environments. Smart contract auditing, full-stack application development, and system architecture."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Applied Research",
-                "description": "Applied research in zero-knowledge proofs, agentic AI workflows, and decentralized governance models."
-              }
-            }
-          ]
-        }
-      }
-    </script>
   </head>
 
   <body
@@ -153,49 +115,55 @@
   >
     <div
       class="fixed inset-0 z-[-1] bg-[size:40px_40px] bg-grid-pattern opacity-20 pointer-events-none"
+      aria-hidden="true"
     ></div>
     <div
       class="fixed inset-0 z-[-1] bg-gradient-to-b from-black via-transparent to-black pointer-events-none"
+      aria-hidden="true"
     ></div>
 
-    <header class="fixed top-0 w-full z-50 mix-blend-difference" id="navbar">
+    <header class="fixed top-0 w-full z-50 mix-blend-difference" role="banner">
       <div
         class="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between"
       >
-        <div class="flex items-center gap-4 group cursor-pointer">
+        <a
+          href="/"
+          class="flex items-center gap-4 group"
+          aria-label="Trebla Home"
+        >
           <div class="relative">
             <div
               class="absolute inset-0 bg-white blur-lg opacity-0 group-hover:opacity-20 transition duration-500"
+              aria-hidden="true"
             ></div>
             <img
               class="size-5 relative z-10"
               src="/assets/media/favicon.svg"
               alt="Trebla"
-              draggable="false"
+              width="20"
+              height="20"
             />
           </div>
           <span
             class="font-display font-bold tracking-widest text-white uppercase text-sm"
             >Trebla</span
           >
-        </div>
-
-        <nav class="flex items-center gap-8">
+        </a>
+        <nav role="navigation" aria-label="Main">
           <a
-            href="http://github.com/trebla-io"
+            href="https://github.com/trebla-io"
             target="_blank"
             rel="noopener noreferrer"
             class="text-xs font-mono text-zinc-500 hover:text-white transition-colors uppercase tracking-widest"
+            aria-label="GitHub"
+            >[GitHub]</a
           >
-            [GitHub]
-          </a>
         </nav>
       </div>
     </header>
 
     <main class="relative pt-40 pb-20">
-      <!-- Hero Section -->
-      <section class="mx-auto max-w-7xl px-6 mb-40">
+      <section class="mx-auto max-w-7xl px-6 mb-40" aria-labelledby="hero">
         <div class="max-w-5xl">
           <div
             class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-8 reveal"
@@ -208,83 +176,89 @@
               >System Operational</span
             >
           </div>
-
           <h1
+            id="hero"
             class="font-display text-6xl sm:text-8xl md:text-9xl font-medium text-white mb-12 leading-[0.85] tracking-tight reveal delay-100"
           >
-            Engineering <br />
-            <span
+            Engineering <br /><span
               class="text-zinc-500 glitch-hover cursor-default inline-block"
               data-value="THE_FUTURE"
               >the future</span
             >
           </h1>
-
           <div
             class="max-w-xl reveal delay-200 border-l border-white/20 pl-8 ml-2"
           >
             <p class="text-lg text-zinc-400 leading-relaxed font-light">
               Trebla is a research and engineering collective. We bridge the gap
-              between
-              <span class="text-white">theoretical research</span> and
-              <span class="text-white">applied technology</span>
-              in blockchain and artificial intelligence.
+              between <span class="text-white">theoretical research</span> and
+              <span class="text-white">applied technology</span> in blockchain
+              and artificial intelligence.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Visual Break -->
-      <section class="w-full mb-40 reveal delay-300">
+      <section class="w-full mb-40 reveal delay-300" aria-label="Visual">
         <div class="mx-auto max-w-7xl px-6">
-          <div
+          <figure
             class="relative w-full aspect-[21/9] overflow-hidden group border-y border-white/10"
           >
             <img
               src="assets/media/cover.jpg"
-              alt="Abstract technology visualization"
+              alt="Technology visualization"
               class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale transition duration-[2s] group-hover:scale-105 group-hover:opacity-80"
+              loading="lazy"
+              width="1920"
+              height="823"
             />
             <div
               class="absolute inset-0 bg-[url('/assets/media/noise.png')] opacity-20 mix-blend-overlay"
             ></div>
-
-            <!-- HUD Elements -->
-            <div class="absolute top-6 left-6 flex gap-4">
+            <div class="absolute top-6 left-6 flex gap-4" aria-hidden="true">
               <div class="h-px w-12 bg-white/50"></div>
               <div class="text-[10px] font-mono text-white/70">IMG_SEQ_01</div>
             </div>
-            <div class="absolute bottom-6 right-6 text-right">
+            <div
+              class="absolute bottom-6 right-6 text-right"
+              aria-hidden="true"
+            >
               <div class="text-[10px] font-mono text-white/70 mb-2">
                 COORDINATES
               </div>
               <div class="text-2xl font-display text-white">34.0522° N</div>
             </div>
-          </div>
+          </figure>
         </div>
       </section>
 
-      <!-- Services Grid -->
-      <section id="work" class="mx-auto max-w-7xl px-6 mb-32">
+      <section
+        id="work"
+        class="mx-auto max-w-7xl px-6 mb-32"
+        aria-labelledby="capabilities"
+      >
         <div
           class="flex items-end justify-between mb-16 reveal border-b border-white/10 pb-8"
         >
-          <h2 class="font-display text-4xl text-white">Capabilities</h2>
-          <div class="hidden sm:block text-xs font-mono text-zinc-500">
+          <h2 id="capabilities" class="font-display text-4xl text-white">
+            Capabilities
+          </h2>
+          <div
+            class="hidden sm:block text-xs font-mono text-zinc-500"
+            aria-hidden="true"
+          >
             /// INDEX_01
           </div>
         </div>
-
         <div
           class="grid gap-px bg-white/10 border border-white/10 sm:grid-cols-3"
-          id="cards-container"
         >
-          <!-- Card 1 -->
           <article
             class="spotlight-card p-10 group transition duration-500 relative overflow-hidden"
           >
             <div
               class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition duration-500 z-10"
+              aria-hidden="true"
             >
               <svg
                 class="w-4 h-4 text-white transform rotate-45"
@@ -318,13 +292,12 @@
               ></div>
             </div>
           </article>
-
-          <!-- Card 2 -->
           <article
             class="spotlight-card p-10 group transition duration-500 relative overflow-hidden"
           >
             <div
               class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition duration-500 z-10"
+              aria-hidden="true"
             >
               <svg
                 class="w-4 h-4 text-white transform rotate-45"
@@ -357,13 +330,12 @@
               ></div>
             </div>
           </article>
-
-          <!-- Card 3 -->
           <article
             class="spotlight-card p-10 group transition duration-500 relative overflow-hidden"
           >
             <div
               class="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition duration-500 z-10"
+              aria-hidden="true"
             >
               <svg
                 class="w-4 h-4 text-white transform rotate-45"
@@ -399,7 +371,7 @@
       </section>
     </main>
 
-    <footer class="border-t border-white/10 bg-black">
+    <footer class="border-t border-white/10 bg-black" role="contentinfo">
       <div
         class="mx-auto max-w-7xl px-6 py-12 flex flex-col md:flex-row gap-8 items-center justify-between"
       >
@@ -412,6 +384,7 @@
       </div>
     </footer>
 
-    <script src="assets/scripts/script.js"></script>
+    <script src="/assets/scripts/structured-data.js"></script>
+    <script src="/assets/scripts/script.js" defer></script>
   </body>
 </html>

@@ -1,3 +1,11 @@
+/**
+ * Trebla Website - Main Stylesheet
+ * Critical styles, animations, and custom effects
+ */
+
+/* ============================================
+   CSS Variables & Theme
+   ============================================ */
 :root {
   --bg: #000000;
   --card-bg: #000000;
@@ -5,37 +13,55 @@
   --accent-glow: rgba(255, 255, 255, 0.1);
 }
 
+/* ============================================
+   Critical Base Styles (FOUC Prevention)
+   ============================================ */
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background-color: var(--bg);
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  color: #e5e7eb;
+  color: rgb(212 212 216);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::selection {
+  background-color: #fff;
+  color: #000;
 }
 
 .font-display {
   font-family: "Space Grotesk", sans-serif;
 }
 
-/* Custom Scrollbar */
+/* ============================================
+   Custom Scrollbar
+   ============================================ */
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg);
 }
+
 ::-webkit-scrollbar-thumb {
   background: #222;
   border-radius: 0;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #444;
 }
 
-/* Animations */
+/* ============================================
+   Reveal Animations
+   ============================================ */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -57,7 +83,9 @@ body {
   transition-delay: 300ms;
 }
 
-/* Spotlight Effect */
+/* ============================================
+   Spotlight Effect on Cards
+   ============================================ */
 .spotlight-card {
   position: relative;
   background: #050505;
@@ -108,12 +136,16 @@ body {
   opacity: 1;
 }
 
-/* Magnetic Effect */
+/* ============================================
+   Magnetic Effect
+   ============================================ */
 .magnetic {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Glitch Text Animation on Hover */
+/* ============================================
+   Glitch Text Animation
+   ============================================ */
 @keyframes glitch-anim-1 {
   0% {
     clip-path: inset(20% 0 80% 0);
@@ -147,7 +179,9 @@ body {
   text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9;
 }
 
-/* Scanline Effect */
+/* ============================================
+   Scanline Effect
+   ============================================ */
 @keyframes scanline {
   0% {
     transform: translateY(-100%);
