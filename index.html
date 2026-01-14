@@ -156,6 +156,7 @@
             rel="noopener noreferrer"
             class="text-xs font-mono text-zinc-500 hover:text-white transition-colors uppercase tracking-widest"
             aria-label="GitHub"
+            data-i18n="nav.github"
             >[GitHub]</a
           >
         </nav>
@@ -173,6 +174,7 @@
             ></span>
             <span
               class="text-[10px] font-mono uppercase tracking-widest text-zinc-400"
+              data-i18n="hero.status"
               >System Operational</span
             >
           </div>
@@ -180,16 +182,20 @@
             id="hero"
             class="font-display text-6xl sm:text-8xl md:text-9xl font-medium text-white mb-12 leading-[0.85] tracking-tight reveal delay-100"
           >
-            Engineering <br /><span
+            <span data-i18n="hero.title.line1">Engineering</span> <br /><span
               class="text-zinc-500 glitch-hover cursor-default inline-block"
               data-value="THE_FUTURE"
+              data-i18n="hero.title.line2"
               >the future</span
             >
           </h1>
           <div
             class="max-w-xl reveal delay-200 border-l border-white/20 pl-8 ml-2"
           >
-            <p class="text-lg text-zinc-400 leading-relaxed font-light">
+            <p
+              class="text-lg text-zinc-400 leading-relaxed font-light"
+              data-i18n="hero.description"
+            >
               Trebla is a research and engineering collective. We bridge the gap
               between <span class="text-white">theoretical research</span> and
               <span class="text-white">applied technology</span> in blockchain
@@ -240,12 +246,17 @@
         <div
           class="flex items-end justify-between mb-16 reveal border-b border-white/10 pb-8"
         >
-          <h2 id="capabilities" class="font-display text-4xl text-white">
+          <h2
+            id="capabilities"
+            class="font-display text-4xl text-white"
+            data-i18n="capabilities.title"
+          >
             Capabilities
           </h2>
           <div
             class="hidden sm:block text-xs font-mono text-zinc-500"
             aria-hidden="true"
+            data-i18n="capabilities.index"
           >
             /// INDEX_01
           </div>
@@ -276,13 +287,21 @@
             </div>
             <div class="h-full flex flex-col justify-between relative z-10">
               <div>
-                <span class="text-xs font-mono text-zinc-500 mb-4 block"
+                <span
+                  class="text-xs font-mono text-zinc-500 mb-4 block"
+                  data-i18n="card1.number"
                   >01</span
                 >
-                <h3 class="font-display text-2xl text-white mb-4">
+                <h3
+                  class="font-display text-2xl text-white mb-4"
+                  data-i18n="card1.title"
+                >
                   Open Source
                 </h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">
+                <p
+                  class="text-sm text-zinc-400 leading-relaxed"
+                  data-i18n="card1.description"
+                >
                   Active contribution to core infrastructure, developer tooling,
                   and open protocols that power the decentralized web.
                 </p>
@@ -315,11 +334,21 @@
             </div>
             <div class="h-full flex flex-col justify-between relative z-10">
               <div>
-                <span class="text-xs font-mono text-zinc-500 mb-4 block"
+                <span
+                  class="text-xs font-mono text-zinc-500 mb-4 block"
+                  data-i18n="card2.number"
                   >02</span
                 >
-                <h3 class="font-display text-2xl text-white mb-4">Services</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">
+                <h3
+                  class="font-display text-2xl text-white mb-4"
+                  data-i18n="card2.title"
+                >
+                  Services
+                </h3>
+                <p
+                  class="text-sm text-zinc-400 leading-relaxed"
+                  data-i18n="card2.description"
+                >
                   End-to-end engineering for high-stakes environments. Smart
                   contract auditing, full-stack application development, and
                   system architecture.
@@ -353,11 +382,21 @@
             </div>
             <div class="h-full flex flex-col justify-between relative z-10">
               <div>
-                <span class="text-xs font-mono text-zinc-500 mb-4 block"
+                <span
+                  class="text-xs font-mono text-zinc-500 mb-4 block"
+                  data-i18n="card3.number"
                   >03</span
                 >
-                <h3 class="font-display text-2xl text-white mb-4">Research</h3>
-                <p class="text-sm text-zinc-400 leading-relaxed">
+                <h3
+                  class="font-display text-2xl text-white mb-4"
+                  data-i18n="card3.title"
+                >
+                  Research
+                </h3>
+                <p
+                  class="text-sm text-zinc-400 leading-relaxed"
+                  data-i18n="card3.description"
+                >
                   Applied research in zero-knowledge proofs, agentic AI
                   workflows, and decentralized governance models.
                 </p>
@@ -378,12 +417,30 @@
         <div class="flex items-center gap-3">
           <div class="size-2 bg-white rounded-full"></div>
           <p class="text-xs font-mono text-zinc-500 uppercase tracking-widest">
-            Trebla © <span id="y">2025</span>
+            <span data-i18n="footer.copyright">Trebla ©</span>
+            <span id="y">2025</span>
           </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <label
+            for="language-selector"
+            class="text-xs font-mono text-zinc-500 uppercase tracking-widest"
+            data-i18n="footer.language"
+            >Language</label
+          >
+          <select
+            id="language-selector"
+            class="bg-zinc-900 border border-white/10 text-zinc-300 text-xs font-mono px-3 py-1.5 rounded hover:border-white/30 transition-colors cursor-pointer focus:outline-none focus:ring-1 focus:ring-white/30 uppercase"
+            aria-label="Select language"
+          >
+            <option value="en">EN</option>
+            <option value="pt">PT</option>
+          </select>
         </div>
       </div>
     </footer>
 
+    <script src="/assets/scripts/i18n.js"></script>
     <script src="/assets/scripts/structured-data.js"></script>
     <script src="/assets/scripts/script.js" defer></script>
   </body>
